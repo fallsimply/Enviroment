@@ -303,7 +303,7 @@
                 <div class="mdl-layout__tab-panel" id="contact">
                     <iframe src="https://docs.google.com/a/go.lisd.net/forms/d/e/1FAIpQLSfAEOxG6pXPpvX_If25NjFZ8-i_pdMv9k6g2cywEIevBYv9VA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                     <!-- 
-                      <form action="#" class="">
+                      <form method="post" action="index.php">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded="MaterialTextfield">
                                 <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
                                 <label class="mdl-textfield__label" for="Name">Name...</label>
@@ -317,12 +317,27 @@
                                 <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
                                 <label class="mdl-textfield__label" for="note">Enter note</label>
                             </div>
-                            <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" data-upgraded=",MaterialButton,MaterialRipple">
-                                    Submit
-                                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
-                            </p>
+                            <br>
+                                  <button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" data-upgraded=",MaterialButton,MaterialRipple">
+                                      Submit
+                                  <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
                         </form>
+                        <?php
+                          $name = $_POST['name'];
+                          $email = $_POST['email'];
+                          $message = $_POST['message'];
+                          $from = 'From: $email'; 
+                          $to = 'adamss5@go.lisd.net'; 
+                          $subject = 'Enviroment Site';
+                          $body = "From: $name\n E-Mail: $email\n Message:\n $message"
+                          if ($_POST['submit']) {
+                            if (mail ($to, $subject, $body, $from)) { 
+                              echo '<p>Your message has been sent!</p>';
+                            } else { 
+                              echo '<p>Something went wrong, go back and try again!</p>'; 
+                            }
+}
+                        ?>
                     -->
                 </div>
             </main>
