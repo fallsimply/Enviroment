@@ -375,3 +375,7 @@ html, body {
   /* Otherwise we'll rely on stacked opacities */
   background: rgba(255, 255, 255, 0.75);
 }
+/* Disable Scrolling */
+  section .contact {
+         overflow:hidden;
+       }
