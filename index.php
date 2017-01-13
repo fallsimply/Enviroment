@@ -305,20 +305,20 @@
                     <!-- 
                       <form method="post" action="index.php">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded="MaterialTextfield">
-                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" name="name">
                                 <label class="mdl-textfield__label" for="Name">Name...</label>
                                 <span class="mdl-textfield__error">Letters and spaces only</span>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
-                                <input class="mdl-textfield__input" type="text" id="Email">
+                                <input class="mdl-textfield__input" type="text" id="Email" name="email">
                                 <label class="mdl-textfield__label" for="Email">Email...</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
-                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note" name="message"></textarea>
                                 <label class="mdl-textfield__label" for="note">Enter note</label>
                             </div>
                             <br>
-                                  <button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" data-upgraded=",MaterialButton,MaterialRipple">
+                                  <button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" data-upgraded=",MaterialButton,MaterialRipple" name="submit">
                                       Submit
                                   <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
                         </form>
