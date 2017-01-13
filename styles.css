@@ -376,6 +376,9 @@ html, body {
   background: rgba(255, 255, 255, 0.75);
 }
 /* Disable Scrolling */
-  section .contact {
-         overflow:hidden;
-       }
+section .contact {
+    overflow: hidden;
+}
+.form {
+    overflow: visible;
+}
