@@ -48,6 +48,25 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.green-light_green.min.css">
         <link rel="stylesheet" href="styles.css">
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length} ;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+        </script>
         <style>
             #view-source {
                 position: fixed;
@@ -74,9 +93,9 @@
                     <a href="#waste" class="mdl-layout__tab">Recycle or Waste</a>
                     <a href="#energy" class="mdl-layout__tab">Save Energy</a>
                     <a href="#water" class="mdl-layout__tab">Save Water</a>
-                    <a href="#features" class="mdl-layout__tab">FAQ</a>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--logo disabled" id="add">
-                        <i class="material-icons" role="presentation">delete</i>
+                    <a href="#contact" class="mdl-layout__tab">Contact Us</a>
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--900" id="add">
+                        <i class="icons-light material-icons" role="presentation">delete</i>
                         <span class="visuallyhidden">Logo</span>
                     </button>
                 </div>
@@ -87,8 +106,22 @@
                         <div class="mdl-card mdl-cell mdl-cell--12-col">
                             <div class="mdl-card__supporting-text">
                                 <h4>Technology</h4>
-                                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in.
-                                Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+                                <div><!-- SLideshow start-->
+                                <video width="320" height="240" controls preload="auto" class="mySlides">
+                                    <source src="TCOT.mp4" type="video/mp4">
+                                    Text Version: https://goo.gl/kPSFPo
+                                </video>
+                                <video width="320" height="240" controls preload="auto" class="mySlides">
+                                    <source src="Compost.mp4" type="video/mp4">
+                                  Text Version:  https://goo.gl/KkAqj0
+                                </video>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusDivs(-1)">
+                                  <i class="material-icons" >keyboard_arrow_left</i>
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusDivs(1)";>
+                                  <i class="material-icons">keyboard_arrow_right</i>
+                                </button>
+                              </div> <!--Slideshow End-->
                             </div>
                             <div class="mdl-card__actions">
                                 <a href="#" class="mdl-button">Read our features</a>
@@ -119,154 +152,156 @@
                             Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
                         </div>
                     </div>
-                    <div class="mdl-layout__tab-panel" id="waste">
-                        <div class="mdl-grid">
-                            <section class="section--left">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">delete_forever</i>
-                                                &nbsp Dispose Responsibly
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Hot Ashes - Wait Until Ashes are cool <br>Electrionics - Discard at an Electronics Recycling Center
-                                        </div>
+                <div class="mdl-layout__tab-panel" id="waste">
+                    <div class="mdl-grid">
+                        <section class="section--left">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">delete_forever</i>
+                                            &nbsp Dispose Responsibly
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Hot Ashes - Wait Until Ashes are cool <br>Electrionics - Discard at an Electronics Recycling Center
                                     </div>
                                 </div>
-                            </section>
-                            <section class="section--center">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">delete_sweep</i>
-                                                &nbsp Recycle
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Plastic, Glass, Paper, Cardboard Recycle Plastic Bags at praticiapating retailers.
-                                        </div>
+                            </div>
+                        </section>
+                        <section class="section--center">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">delete_sweep</i>
+                                            &nbsp Recycle
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Plastic, Glass, Paper, Cardboard Recycle Plastic Bags at praticiapating retailers.
                                     </div>
                                 </div>
-                            </section>
-                            <section class="section--right">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">delete</i>
-                                                &nbsp Trash
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Anything else
-                                        </div>
+                            </div>
+                        </section>
+                        <section class="section--right">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">delete</i>
+                                            &nbsp Trash
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Anything else
                                     </div>
                                 </div>
-                            </section>
-                        </div>
+                            </div>
+                        </section>
                     </div>
-                    <div class="mdl-layout__tab-panel" id="water">
-                        <div class="mdl-grid">
-                            <section class="section--left">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">format_color_reset</i>
-                                                &nbsp Leaks and Water Saving in the Bathroom
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Fix Leaky Faucets. Turn of the water when you're brushing your teeth. Take shorter showers.
-                                        </div>
+                </div>
+                <div class="mdl-layout__tab-panel" id="water">
+                    <div class="mdl-grid">
+                        <section class="section--left">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">format_color_reset</i>
+                                            &nbsp Leaks and Water Saving in the Bathroom
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Fix Leaky Faucets. Turn of the water when you're brushing your teeth. Take shorter showers.
                                     </div>
                                 </div>
-                              </div>
-                            </section>
-                            <section class="section--center">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">lightbulb_Outline</i>
-                                                &nbsp Use LED Lightbulbs
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Plastic, Glass, Paper, Cardboard Recycle Plastic Bags at praticiapating retailers.
-                                        </div>
+                            </div>
+                        </section>
+                        <section class="section--center">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">local_florist</i>
+                                            &nbsp Use Grey Water to water plants
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Grey water is water that contains traces of dirt, food, grease, or household products. The contaimients in Greywater is fertilizer for plants.
                                     </div>
                                 </div>
-                            </section>
-                            <section class="section--right">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">delete_forever</i>
-                                                &nbsp Dispose Responsibly
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                          Hot Ashes - Wait Until Ashes are cool <br>Electrionics - Discard at an Electronics Recycling Center
-                                        </div>
+                            </div>
+                        </section>
+                        <section class="section--right">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">local_drink</i>
+                                            &nbsp Use Rainbarrels
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                      Use rainbarrels to collect rainwater(greywater) and
                                     </div>
                                 </div>
-                            </section>
-                        </div>
+                            </div>
+                        </section>
+
                     </div>
-                    <div class="mdl-layout__tab-panel" id="energy">
-                        <div class="mdl-grid">
-                            <section class="section--left">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">lightbulb_outline</i>
-                                                &nbsp Use LED Lightbulbs
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            LED bulbs are more power efficent and contains no mercury.
-                                        </div>
+                </div>
+                <div class="mdl-layout__tab-panel" id="energy">
+                    <div class="mdl-grid">
+                        <section class="section--left">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">lightbulb_outline</i>
+                                            &nbsp Use LED Lightbulbs
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        LED bulbs are more power efficent and contains no mercury.
                                     </div>
                                 </div>
-                            </section>
-                            <section class="section--center">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">delete_sweep</i>
-                                                &nbsp Recycle
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Plastic, Glass, Paper, Cardboard Recycle Plastic Bags at praticiapating retailers.
-                                        </div>
+                            </div>
+                        </section>
+                        <section class="section--center">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">delete_sweep</i>
+                                            &nbsp Recycle
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Plastic, Glass, Paper, Cardboard Recycle Plastic Bags at praticiapating retailers.
                                     </div>
                                 </div>
-                            </section>
-                            <section class="section--right">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-                                    <div class="recycle-card mdl-card mdl-shadow--2dp">
-                                        <div class="mdl-card__title">
-                                            <h2 class="mdl-card__title-text">
-                                                <i class="material-icons">delete_forever</i>
-                                                &nbsp Dispose Responsibly
-                                            </h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                            Hot Ashes - Wait Until Ashes are cool Electrionics - Discard at an Electronics Recycling Center
-                                        </div>
+                            </div>
+                        </section>
+                        <section class="section--right">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                                <div class="recycle-card mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">
+                                            <i class="material-icons">delete_forever</i>
+                                            &nbsp Dispose Responsibly
+                                        </h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Hot Ashes - Wait Until Ashes are cool Electrionics - Discard at an Electronics Recycling Center
                                     </div>
                                 </div>
-                            </section>
-                        </div>
+                            </div>
+                        </section>
                     </div>
+                </div>
+                <div class="mdl-layout__tab-panel" id="contact">
+                    <iframe src="https://docs.google.com/a/go.lisd.net/forms/d/e/1FAIpQLSfAEOxG6pXPpvX_If25NjFZ8-i_pdMv9k6g2cywEIevBYv9VA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                 </div>
             </main>
         </div>
