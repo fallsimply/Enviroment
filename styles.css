@@ -380,5 +380,5 @@ section .contact {
     overflow: hidden;
 }
 .form {
-    overflow: visible;
+    height: 100%;
 }
