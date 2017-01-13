@@ -379,6 +379,6 @@ html, body {
 section .contact {
     overflow: hidden;
 }
-.form {
+#form {
     height: 100%;
 }
