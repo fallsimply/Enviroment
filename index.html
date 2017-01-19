@@ -43,25 +43,24 @@
         <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
-        <script>
+<script>
 var slideIndex = 1;
-showDivs(slideIndex);
+showSlides(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-
-function showDivs(n) {
+function showSlides(n) {
   var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
   }
-  x[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";  
 }
-        </script>
+</script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.green-light_green.min.css">
@@ -102,10 +101,10 @@ function showDivs(n) {
                                     <source src="Compost.mp4" type="video/mp4">
                                   Text Version:  https://goo.gl/KkAqj0
                                 </video>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusDivs(-1)">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(-1)">
                                   <i class="material-icons" >keyboard_arrow_left</i>
                                 </button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusDivs(1)";>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(1)";>
                                   <i class="material-icons">keyboard_arrow_right</i>
                                 </button>
                               </div> <!--Slideshow End-->
