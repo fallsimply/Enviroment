@@ -43,24 +43,10 @@
         <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  slides[slideIndex-1].style.display = "block";  
-}
-</script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://raw.githubusercontent.com/Dogfalo/materialize/master/js/carousel.js"></script>
+        <link rel="stylesheet" href="https://assets-cdn.github.com/assets/gist-embed-04d41fe71632a896c1dd3e883de9f48941fad414d68185aa8df817b950873a05.css">
+        <script src="https://gist.github.com/SimplyCodin/19566cfb6b7de1db5804ef5ceed936d9.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.green-light_green.min.css">
@@ -92,21 +78,23 @@ function showSlides(n) {
                         <div class="mdl-card mdl-cell mdl-cell--12-col">
                             <div class="mdl-card__supporting-text">
                                 <h4>Technology</h4>
-                                <div><!-- SLideshow start-->
-                                <video width="320" height="240" controls preload="auto" class="mySlides">
-                                    <source src="TCOT.mp4" type="video/mp4">
-                                    Text Version: https://goo.gl/kPSFPo
-                                </video>
-                                <video width="320" height="240" controls preload="auto" class="mySlides">
-                                    <source src="Compost.mp4" type="video/mp4">
-                                  Text Version:  https://goo.gl/KkAqj0
-                                </video>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(-1)">
-                                  <i class="material-icons" >keyboard_arrow_left</i>
-                                </button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(1)";>
-                                  <i class="material-icons">keyboard_arrow_right</i>
-                                </button>
+                                  <div class="carousel carousel-slider center" data-indicators="true">
+                                    <div class="carousel-fixed-item center">
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(-1)">
+                                        <i class="material-icons" >keyboard_arrow_left</i>
+                                      </button>
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(1)";>
+                                        <i class="material-icons">keyboard_arrow_right</i>
+                                      </button>
+                                    </div>
+                                  <video width="320" height="240" controls preload="auto" class="mySlides">
+                                      <source src="TCOT.mp4" type="video/mp4">
+                                      Text Version: https://goo.gl/kPSFPo
+                                  </video>
+                                  <video width="320" height="240" controls preload="auto" class="mySlides">
+                                      <source src="Compost.mp4" type="video/mp4">
+                                      Text Version:  https://goo.gl/KkAqj0
+                                    </video>
                               </div> <!--Slideshow End-->
                             </div>
                             <div class="mdl-card__actions">
