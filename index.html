@@ -80,18 +80,18 @@
                                 <h4>Technology</h4>
                                   <div class="carousel carousel-slider center" data-indicators="true">
                                     <div class="carousel-fixed-item center">
-                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(-1)">
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="$('.carousel').carousel('prev');">
                                         <i class="material-icons" >keyboard_arrow_left</i>
                                       </button>
-                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="plusSlides(1)";>
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--icon" onClick="$('.carousel').carousel('next')";>
                                         <i class="material-icons">keyboard_arrow_right</i>
                                       </button>
                                     </div>
-                                  <video width="320" height="240" controls preload="auto" class="mySlides">
+                                  <video class="carousel-item" controls preload="auto" class="mySlides">
                                       <source src="TCOT.mp4" type="video/mp4">
                                       Text Version: https://goo.gl/kPSFPo
                                   </video>
-                                  <video width="320" height="240" controls preload="auto" class="mySlides">
+                                  <video class="carousel-item" controls preload="auto" class="mySlides">
                                       <source src="Compost.mp4" type="video/mp4">
                                       Text Version:  https://goo.gl/KkAqj0
                                     </video>
